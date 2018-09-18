@@ -1,0 +1,106 @@
+/*
+element name
+{
+  propertyName: value;
+  propertyName: value;
+}
+*/
+
+/*This will style all of my h1 elements*/
+/*We can represent colors in a variety of ways: RGBA, Hex, Color
+We recommend RGBA because it is much more precise for custom colors and that last digit
+controls transparency
+*/
+h1 {
+    color: rgba(109, 218, 199, 1)
+  }
+  
+  
+  
+  /*This will style all of my rows and columns of my table elements*/
+  /*Notice that in this case th takes precedence since it is more specific than tr, that just means it is the most interntal nested element in HTML*/
+  tr{
+    border-style: dashed;
+  }
+  
+  th{
+    border-style: solid;
+  }
+  
+  
+  /*James's Fun with CSS*/
+  /*Try modifying this to see how you can create different versions of the code we have written in HTML. Notcie that even though multiple pages can have exactly the same HTML but look completely different depending on CSS. CSS can even be used to modify the layout of a website but for now lets focus on single elements until we introduce Bootsrap.*/
+  
+  div 
+  {
+    /*Here we have made it easier to see where the divs are*/
+    /*notice that in the border color I have set the border to be more transparent*/
+    /*All divs will have this property unless overwritten with more specific definition*/
+    border: solid;
+    border-color: rgba(109, 218, 199, 0.5);
+  }
+  
+  
+  .circle{
+      /*Inside this definition is of a class circle of the div element*/
+    /*We could make this more specific by changing the header to "div .circle" instead of simply using ".circle". This would mean all div elements of the circle class will take these properties. Remember that elements will be displayed with the most specific definition. Try adding the word "div" before ".circle"
+    */
+  
+    background-color: red;
+    color: #FFFFFF;
+    width: 100px;
+    height: 100px;
+    border-radius: 25%;
+  }
+  
+  
+  #square {
+     /*
+     The most specific definition usually used for specific elements is an id. To add CSS to an id we use "#idName". This div will be overwritten with the stats below so instead of having the border defined by "div" it will have the border defined within this block. 
+    */
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+    background: purple;
+    border: dashed;
+    border-color: rgba(109, 218, 199, 1);
+  }
+  
+  
+  .blue {
+    /*
+     The last circle has two classes with the last class taking precedence over the first. So blue is the last class and therefore ".blue" can overwrite information for the final circle. Therefore the color will changed and a transition added. A transition is another CSS element that you can add. There are many different types of CSS elements and it is unneccessary to memorize the names of all of them, just know they exist and can be found on W3 Schools 
+   */
+    background-color: blue;
+    transition: .5s;
+    
+  }
+  
+    /*
+     In this last block we add a hover effect to the blue circle div. All this does is change what happens to the element when a mouse is hovered over this specific element. 
+   */
+  .blue:hover {
+    background-color: darkblue;
+    transform: scale(1.3);
+    
+  }
+  
+  /*
+     On a last note, you can change font type, size, and color. 
+     When selecting font size, you will want to make sure that the font is compatible with the browser you are using. We will cover loading in fonts (such as google fonts) in our Bootstrap info session. 
+   */
+  .funWithCSS
+  {
+    background: rgba(30, 33, 38, 0.9);
+    color: rgba(66, 134, 244, 1);
+    /* Note: you can use px, %, or rem to represent size. There is a difference between the three when it comes to page adaptability (i.e. the change in size in relation to the screen size. We want all elements to look good on screens of all different sizes.)*/
+    font-size: 115%; 
+    font-family: "Verdana", Verdana, Sans-serif;
+    font-style: normal;
+  }
+  
+  strong
+  {
+    color: rgba(11, 11, 12, 1);
+  }
+  

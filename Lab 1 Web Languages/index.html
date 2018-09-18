@@ -1,15 +1,221 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
 
-    <!-- Title shown on the tab. -->
-    <title>About Me</title>
+     <!DOCTYPE html>
 
-    <!-- Include libraries and othe files in the head section -->
+     <!-- Hey, welcome to the first lab -->
+     <!-- First of all, feel free to mess around with the code in this fiddle to your heart's content. Your changes will not be saved so you don't have to worry about that and it is easier to learn when you are trying things first-hand. -->
+     
+     
+     <!-- These right here are HTML comments. Yes, they have weird syntax, but there's nothing we can do about that -->
+     
+     
+     
+     <!-- HTML follows a very easy system: <tagName>Content</tagName> where the first tagName opens a tag and the /tagname closes the tag.-->
+     <!-- To get started we need a boiler plate. You can google "HTML boiler plate" and easily get the following: -->
+     
+     <!-- <html>
+       <head>
+         <title>title</title>
+       </head>
+       <body>
+       
+       </body>
+     </html> -->
+     
+     <!-- Let's start from top to bottom. The html tag is just what determines where our code starts and ends. There's no way around this tag, every html document must start and end with the html tag. -->
+     <!-- The head tag is used to write things that are not going to be seen in the page. These include linking files and frameworks. We'll be using it a little later to show how to link a CSS file to our HTML file -->
+     <!--  -->
+     <!-- The title tag is not necessary but is always nice to have. It gives a title to the web page that is displayed on the browser's tab. As previously stated, this tag is not seen in the page itself, so it is included inside the head tag. -->
+     <!-- Finally we get to the main part of the boilerplate: the body. Everything that you see in a webpage is inside the body tag. -->
+     
+     <!-- Let's now get to writing some code! -->
+     
+     <!-- HTML boilerplate: -->
+     <html>
+     
+       <head>
+        <meta charset="UTF-8">
+         <title>About Me</title>
+         
+         <!--  The title is not displayed while using JSFiddle but it is still a nice touch to include it. -->
+     
+         <!--     Load in files here -->
+         <!-- By loading in files we mean that you will load in your CSS, JavaScript, Custom Fonts, etc. In fiddle the JavaScript and CSS are automatically loaded but we will have to do this ourselves when we begin making our files locally. We will cover this in our Bootstrap Info Session -->
+         <link rel="stylesheet" href="style.css">
+         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+         <script src="design.js"></script>
+        </head>
+     
+       <body>
+         
+        <div id="demo">
+        <!--    First, we'll look at the header (h) tag. it goes from 1 to 6, 1 being the biggest and 6 being the smallest. The way they work is they just take any text inside of them and format it as a title -->
+         <h1>Intro To HTML and CSS</h1>
+         <h2>I am a header 2. I am smaller than h1.</h2>
+         <h3>I am an h3. I'm in the middle!</h3>
+         <h4>Smaller headers aren't used as much.</h4>
+         <h5>But it is still good to know that they exist.</h5>
+         <h6>I am h6. I am the smallest header.</h6>
+     
+         <!--     hr just prints a line through the page. I am using it to separate topics. hr is one of the few tags that doesn't have to be closed, since there is no way for us to write content inside of it! -->
+         <hr>
+     
+         <!--  Now if we think of our web page as a book, right below a title would be text, ant that is exactly what the paragraph (p) tag is for! It helps us write normal, not title text. -->
+     
+         <p> I am a paragraph. I just show plain text.</p>
+     
+         <!--   If you were adventurous, you may have notices that just writing text without any tag will also print plain text: -->
+     
+         I am not a paragraph but I can show plain text too!
+     
+         <!--   So what even is the point of a paraghrph? There are two reasons why we should use paragraphs instead of text without tags. First, such text cannot be eddited by CSS or JavaScript (more on that later). Second, the paragraph tag includes the properties of a paragraph. This means that it will leave the appropriate spacing as you would when writing different paraghraphs. -->
+         <p>This is paragraph number one.</p>
+         <p>And this is paragraph number two!
+         
+         
+         I have many returns in the code but they don't show up on the page since I am inside the same paragraph tag. I will either need a new pareagraph tag or a break tag (br) to have a return.
+         <!-- This is a break tag and it requires no closing tag it is essentially just a return-->
+         <br>
+         See, I am still in the same paragraph but on another line
+         </p>
+     
+         This is untagged text number one.
+         This is untagged text number two.
+     
+     
+     
+         <hr>
+     
+     
+         <!--     Next, we are going to take a look at lists. Lists are just bullet points with information. For this tutorial we are only going to focus on unordered lists (ul), since ordered lists are almost never used. -->
+         <!--   To create a list, we begin by using the ul tag. This will tell our webpage that we want to begin a list. But how do we add our bullet points? We use il for that! -->
+         <ul>
+           <li>I'm a bullet point!</li>
+           <li>More points</li>
+           <li>And more!</li>
+         </ul>
+     
+     
+         <hr>
+     
+     
+         <!--     Tables are just ways of organizing information like tables in Microsoft Word.! They have a syntax similar to lists but with an added step since you have to decide where the rows (tr) and columns (th) are.  -->
+         <table>
+           <tr>
+             <th>I am space 1 of this table</th>
+             <th>I am space 2 of this table</th>
+           </tr>
+           <tr>
+             <th>I am space 3 of this table</th>
+             <th>I am space 4 of this table</th>
+             <th>I am space 5 of this table</th>
+           </tr>
+         </table>
+         <!--   As you can see this looks like a very bland table. So let's mix some of the things we have learned so far to make is better! -->
+         <h2><u>Better Table:</u></h2>
+         <table>
+           <tr>
+             <th>
+               <p>I am space 1 of this table</p>
+             </th>
+             <!-- Note how we can write tags inside the content of other tags. -->
+             <th>
+               <h2>I am space 2 of this table</h2></th>
+           </tr>
+           <tr>
+             <th>
+               <ul>
+                 <li>We</li>
+                 <li>are</li>
+                 <li>space 3</li>
+               </ul>
+             </th>
+             <th><i>I am space 4 of this table</i></th>
+           </tr>
+         </table>
+     
+     
+         <hr>
+     
+         <!-- With this information, try making a list of lists on your own! -->
+         <h2><u>List of Lists:</u></h2>
+     
+     
+     
+     
+     
+     
+         <hr>
+     
+     
+     
+         <!--     Ancher tags (a) work as links. They can either link to an outside website or to another html file. For these tags, you need to reference something so the syntax is a little different: -->
+         <a href="https://kuwebdesign.github.io">CLICK ME TO GO TO OUR WEBSITE</a>
+         <!-- Note: hit run again to go back. -->
+         <!--     Make sure to always add the "https://" before the website name or else it will not work. -->
+     
+     
+         <hr>
+     
+         <!-- Image tags (img) are used to add pictures to our website. Their syntax is very similar to the ancher tags too! You also need to add a reference to something, in this case an image, but since we can't really add any content then we don't need a closing tag! -->
+         <img src="http://parkanimalhospital.ca/clients/17995/images/slideshows/78343/dog%20running%20in%20grass.jpg">
+         <!-- We are going to learn how to change the dimesions of the image when talking about css. -->
+     
+     
+         <hr>
+     
+     
+         <!--   Finally let's take a look at divs. A div is a block of code. That's it. It is used to separate chunks of code and it is useful in CSS but we don't need to use them yet. Anything after a div will be placed below as opposed to on the side. All divs have been modified in CSS to include a border to easily differentiate them-->
+     
+         info without a div.
+         more info.
+         <div>
+           info in a div.
+         </div>
+         <div>
+           more info.
+         </div>
+     
+         <div>
+         
+         <!--   Here we have James's example of experimenting with CSS. As well as a prime example of nested tags and giving specifications to tags (class and id). Class is generally used for multiple elements and ID is more specific usually used for a single element. -->
+         
+         <h2>James's Fun with CSS</h2>
+         
+           <div class="circle">
+           This is a circle
+           </div>
+           <div id="square">
+           This is a square
+           </div>
+           <div class="circle blue">
+           This is a circle
+           </div>
+           
+         </div>
+         
+         <div class="funWithCSS">
+         <strong>CSS is used to stylize your webpage</strong> and can help set it apart from others that may have a similar structure. Many websites use very similar structures but have very different designs for this reason. At the very basic level, CSS can modify fonts, text size and color, borders, margins, and padding. At a more advanced level, CSS can add hover or click effects, transitions, and complex animations. 
+     <br><br>    
+     Some helpful design tips is to draw out what you want in advance and then after creating you structure, implement that design in CSS. Be sure to pick a color palette and fonts you plan to use and keep the same style throughout. Keep advanced elements, transitions, and pictures at a minimum to add emphasis to them without slowing down your webpage load time.  
+         </div>
+         <button type="button" onclick="myFunction()">Click Me!</button>
+         </div>
 
-  </head>
-  <body>
-  <!-- Begin the body of your page -->
-  </body>
-</html>
+        <div id="jQuery">
+            <h1>Welcome to jQuery</h1>
+            <h2>The easiset way to make dynamic changes</h2>
+        
+            <ul>
+                <li id="first">These</li>
+                <li>elements</li>
+                <li class="pink">will</li>
+                <li class="pink">be</li>
+                <li>changed</li>
+            </ul>
+        
+            <h4>I am going to change!</h4>
+        </div>
+       </body>
+     
+     </html>
+    
