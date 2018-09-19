@@ -11,6 +11,9 @@ element name
 We recommend RGBA because it is much more precise for custom colors and that last digit
 controls transparency
 */
+p{
+  color: red;
+}
 h1 {
     color: rgba(109, 218, 199, 1)
   }
@@ -50,7 +53,7 @@ h1 {
     color: #FFFFFF;
     width: 100px;
     height: 100px;
-    border-radius: 25%;
+    border-radius: 50%;
   }
   
   
