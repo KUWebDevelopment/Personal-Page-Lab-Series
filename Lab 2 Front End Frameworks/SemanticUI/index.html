@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- SEMANTIC UI resource-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.js"></script>
+
+    <title>Semantic UI</title>
+
+  </head>
+
+  <body>
+    <div class="ui container">
+      <div class="grid">
+        <div class="row">
+          <div class="ui secondary  menu">
+            <a id="about" class="item active">
+              About
+            </a>
+            <a id="edu" class="item">
+              Education
+            </a>
+            <a id="exp" class="item">
+              Experience
+            </a>
+            <div class="right menu">
+              <a class="link item">
+                Github
+              </a>
+              <a class="link item">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="aboutPage" class="ui segment">
+            <h1>Meeko</h1>
+            <h2>Professional Sneerer</h2>
+            <p>
+              Do you need someone to exceptionally sneer at another for you? I am your cat. Hire me.
+            </p>
+          </div>
+          <div id="eduPage" class="ui segment">
+            <h1>Education</h1>
+            <p>
+              Primal Instinct University<br \>
+              &emsp; GPA: 4.0
+              
+            </p>
+          </div>
+          <div id="expPage" class="ui segment">
+            <h1>Experience</h1>
+            <p>
+              Many years of detesting <strong>humans</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <script>
+      $(document).ready(function () {
+        //At Start
+        $("#eduPage").hide();
+        $("#expPage").hide();
+        $("#aboutPage").show();
+        //switches between tabs
+        $('.ui .item').on('click', function () {
+          $('.ui .item').removeClass('active');
+          $(this).addClass('active');
+        });
+        //About page
+        $("#about").click(function() {
+          $("#eduPage").hide();
+          $("#expPage").hide();
+          $("#aboutPage").show();
+        });
+        //Education page
+        $("#edu").click(function() {
+          $("#eduPage").show();
+          $("#expPage").hide();
+          $("#aboutPage").hide();
+        });
+        //Experience page
+        $("#exp").click(function() {
+          $("#eduPage").hide();
+          $("#expPage").show();
+          $("#aboutPage").hide();
+        });
+      });
+    </script>
+  </body>
+</html>
