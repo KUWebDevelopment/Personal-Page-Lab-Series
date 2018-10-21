@@ -5,7 +5,7 @@ This project consists of three labs used for students to follow along with in or
 
 Clone repository for use on your personal machine. Uncomment code to see how the page changes with each code block. 
 
-### Prerequisites
+## Prerequisites
 
 Basic text editor. We use:
 
