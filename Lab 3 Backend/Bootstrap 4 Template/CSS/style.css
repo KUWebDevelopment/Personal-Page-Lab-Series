@@ -1,0 +1,60 @@
+/* Jumbotron */
+.jumbotron {
+    /* adds image to jumbotron */
+    background-image: url("../img/space.jpg");
+    background-size: cover;
+    color: white;
+}
+
+/* Card */
+.card {
+    margin: 0 1rem;
+    float: none;
+    margin-bottom: 1rem;
+    position: center;
+}
+
+/* All text */
+body
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.section-heading
+{
+    padding-top: 5rem;
+}
+
+/* Footer */
+footer
+{
+    height: 10rem;
+    background-color: #343a40;
+    align-items:center;
+}
+
+/* Section */
+section
+{
+    margin: 2rem;
+}
+
+/* submit button */
+
+.btn
+{
+    /* static */
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #343a40;
+    border-color: #343a40;
+}
+
+.btn:hover
+{
+    /* on hover */
+    background-color: #343a40;
+    color: white;
+    border-color: black;
+}
