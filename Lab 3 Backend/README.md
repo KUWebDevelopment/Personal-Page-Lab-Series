@@ -27,3 +27,4 @@ Steps for using the template:
 4. Open Folder in Personal Code Editor (We like VS Code: https://code.visualstudio.com/download)
 5. Modify Template 
 
+//Open `index.html` with your web browser (such as Chrome) to view changes (remember to refresh the page to view saved changes)
